@@ -1,0 +1,27 @@
+//Allocate a dynamic memory segment for a dynamic array, fill each element of the array with a random number from 1 to 9,
+//and then print in order each element of the array, the value of each element, the address of the element in memory.
+
+#include<iostream>
+
+int main()
+{
+	
+	int size;
+	std::cout << "Enter size of the array: ";
+	std::cin >> size;
+	std::cout << std::endl;
+	int *array = new int[size];
+	
+	//fill array
+	for (int i = 0; i < size; ++i)
+	{
+		array[i] = rand() % 10;
+	}
+
+	//output array
+	for (int i = 0; i < size; ++i)
+	{
+		std::cout << "value of the [" << i << "] element of the array = " << array[i] << ". \t" << "The address of the element: " << array + i << std::endl;
+	}
+	delete[] array;
+}
