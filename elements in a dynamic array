@@ -19,7 +19,7 @@ void ShowArray(const int* const arr, const int size)
 	std::cout << std::endl;
 }
 
-//changing the size of the array && adding an element to the array
+//changing the size of the array && adding a new element to the array
 void Push_Back(int* &arr, int &size, const int value)
 {
 	int* newArray = new int[size + 1];
